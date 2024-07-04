@@ -19,7 +19,7 @@
     border-radius: 2vh; /* Borda arredondada em relação à altura da viewport */
     width: 75vh; /* Largura relativa à altura da viewport */
     box-sizing: border-box;
-    text-align: center; /* Centraliza texto */
+    text-align: left; /* Alinha o texto à esquerda */
     position: relative; /* Garante que a posição absoluta da imagem seja em relação a este elemento */
     z-index: 2; /* Eleva o conteúdo sobre a imagem */
     margin: 0; /* Remove a margem para centralização */
@@ -31,6 +31,7 @@
     font-size: 5vh; /* Tamanho de fonte relativo à altura da viewport */
     letter-spacing: -1px;
     margin: 0 0 3vh 0; /* Margens relativas à altura da viewport */
+    text-align: left; /* Alinha o texto à esquerda */
 }
 
 .content p {
@@ -39,29 +40,33 @@
     letter-spacing: -0.54px;
     line-height: 113%;
     margin: 0 0 3vh 0; /* Margens relativas à altura da viewport */
+    text-align: left; /* Alinha o texto à esquerda */
 }
 
 .content .info {
     display: flex;
     justify-content: center; /* Centraliza itens horizontalmente */
     margin-top: 4vh; /* Espaçamento superior relativo à altura da viewport */
+    text-align: left; /* Alinha o texto à esquerda */
 }
 
 .content .info div {
     margin-right: 4vh; /* Margem direita relativa à altura da viewport */
-    text-align: center;
+    text-align: left; /* Alinha o texto à esquerda */
 }
 
 .content .info div h3 {
     font-weight: 400;
     font-size: 4vh; /* Tamanho de fonte relativo à altura da viewport */
     margin: 0;
+    text-align: left; /* Alinha o texto à esquerda */
 }
 
 .content .info div p {
     font-weight: 400;
     font-size: 2.5vh; /* Tamanho de fonte relativo à altura da viewport */
     margin: 0;
+    text-align: left; /* Alinha o texto à esquerda */
 }
 
 .image {
@@ -75,21 +80,21 @@
     top: 50%; /* Centraliza verticalmente */
     left: 50%; /* Centraliza horizontalmente */
     transform: translate(-20%, -40%); /* Ajusta para a centralização completa */
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.384) ;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.384);
 }
-
 
 @media (max-width: 768px) {
     .container {
-      flex-direction: column; /* Altera a direção do flex para coluna */
-      height: auto; /* Ajusta a altura automaticamente */
-      padding: 4vh; /* Ajusta o padding para telas menores */
+        flex-direction: column; /* Altera a direção do flex para coluna */
+        height: auto; /* Ajusta a altura automaticamente */
+        padding: 4vh; /* Ajusta o padding para telas menores */
     }
   
     .content {
-      width: 90%; /* Ajusta a largura para 100% */
-      transform: translate(0, 0); /* Remove o translate para centralização correta */
-      margin-bottom: 4vh; /* Adiciona margem inferior para espaçamento */    
+        width: 90%; /* Ajusta a largura para 100% */
+        transform: translate(0, 0); /* Remove o translate para centralização correta */
+        margin-bottom: 4vh; /* Adiciona margem inferior para espaçamento */    
+        text-align: left; /* Alinha o texto à esquerda */
     }
   
     .image {
@@ -98,5 +103,6 @@
         position: static; /* Remove posicionamento absoluto */
         transform: none; /* Remove transformação */
         display: block; /* Garante que a imagem seja exibida */
-        margin-top: 4vh; /* Adiciona margem superior para espaçamento */    }
-  }
+        margin-top: 4vh; /* Adiciona margem superior para espaçamento */
+    }
+}
