@@ -1,0 +1,127 @@
+/* CSS Principal */
+
+.subscribe-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('../img/img-homepage.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    padding: 5vh 5vw;
+    overflow: hidden;
+}
+
+.subscribe-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    z-index: 1;
+}
+
+.subscribe-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.subscribe-intro {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0); /* Fundo semi-transparente */
+    padding: 5vh 5vw;
+    border-radius: 1vh;
+    text-align: center;
+    margin-bottom: 2vh; /* Espaçamento inferior */
+    position: relative;
+    z-index: 3; /* Coloca acima do fundo do .subscribe */
+}
+
+.subscribe-intro h2 {
+    font-size: 6vh;
+    font-weight: 600;
+    margin-bottom: 2vh;
+}
+
+.subscribe-intro p {
+    font-size: 3vh;
+}
+
+.grid-contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* duas colunas */
+    gap: 4vh; /* Espaçamento entre as colunas */
+    counter-reset: grid-counter;
+    margin-bottom: 5vh;
+    z-index: 3; /* Coloca a grade acima do fundo do .subscribe-section */
+}
+
+.grid-contact a {
+    text-decoration: none;
+    color: inherit; /* Herda a cor do texto */
+}
+
+.grid-contact article {
+    text-align: center; /* Centraliza o texto dentro do artigo */
+    padding: 2vh; /* Espaçamento interno do artigo */
+    background: rgba(255, 255, 255, 0.1); /* Fundo branco semi-transparente para os artigos */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para os artigos */
+    transition: transform 0.3s; /* Transição suave para hover */
+}
+
+.grid-contact article:hover {
+    transform: scale(1.05); /* Aumenta o artigo ao passar o mouse */
+}
+
+.grid-contact i {
+    font-size: 5vh; /* Tamanho dos ícones */
+    margin-bottom: 1vh; /* Espaçamento abaixo do ícone */
+    color: var(--highlight-color); /* Cor dos ícones */
+}
+
+.grid-contact h3 {
+    font-size: 3vh;
+    padding-left: 1vh;
+    padding-bottom: 1vh; /* Espaçamento abaixo do título */
+}
+
+.grid-contact p {
+    font-size: 2.5vh;
+    line-height: 1.5; /* Espaçamento entre linhas */
+    color: #fff; /* Ajuste de cor do texto */
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+    .grid-contact {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        gap: 2vh; /* Espaçamento entre os itens */
+        padding: 0 2vh; /* Adicionar padding para garantir que os elementos não toquem as bordas da tela */
+    }
+
+    .grid-contact article {
+        width: 100%; /* Certificar que os artigos ocupem 100% da largura do contêiner */
+        margin: 0 auto; /* Centralizar os artigos */
+        box-sizing: border-box; /* Garantir que o padding seja incluído na largura */
+    }
+
+    .grid-contact i {
+        font-size: 3.5vh; /* Reduzir um pouco o tamanho dos ícones para melhor visualização */
+    }
+
+    .grid-contact h3 {
+        font-size: 2vh; /* Ajustar o tamanho do título */
+    }
+
+    .grid-contact p {
+        font-size: 1.8vh; /* Ajustar o tamanho do texto */
+    }
+}

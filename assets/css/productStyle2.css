@@ -1,0 +1,162 @@
+.section-products3 {
+  background-image: url('../img/fundo-de-madeira.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.4s ease-in;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); /* Sombreamento com 50% de opacidade */
+
+}
+
+.section-products3 h2 {
+  font-size: 5vh;
+}
+
+.section-products3 h2,
+.section-products3 p {
+  z-index: 3;
+  margin: 0 0 5vh;
+  text-align: center;
+  color: #ffffff;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.card {
+  position: absolute;
+  width: 85%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease;
+  /* Adicionando transição para a opacidade */
+  opacity: 0;
+  /* Inicialmente, todas as imagens têm opacidade zero */
+  pointer-events: none;
+  /* Garante que os cliques não passem para as imagens invisíveis */
+}
+
+.container-products3 {
+  width: 100%;
+  max-width: 80vh;
+  max-height: 75vh;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 5vh;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Positioning and scaling for each image */
+#item-1:checked~.cards #song-7,
+#item-2:checked~.cards #song-1,
+#item-3:checked~.cards #song-2,
+#item-4:checked~.cards #song-3,
+#item-5:checked~.cards #song-4,
+#item-6:checked~.cards #song-5,
+#item-7:checked~.cards #song-6 {
+  transform: translateX(-50%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked~.cards #song-2,
+#item-2:checked~.cards #song-3,
+#item-3:checked~.cards #song-4,
+#item-4:checked~.cards #song-5,
+#item-5:checked~.cards #song-6,
+#item-6:checked~.cards #song-7,
+#item-7:checked~.cards #song-1 {
+  transform: translateX(50%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked~.cards #song-1,
+#item-2:checked~.cards #song-2,
+#item-3:checked~.cards #song-3,
+#item-4:checked~.cards #song-4,
+#item-5:checked~.cards #song-5,
+#item-6:checked~.cards #song-6,
+#item-7:checked~.cards #song-7 {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+  pointer-events: auto;
+  /* Permite cliques na imagem visível */
+}
+
+.player {
+  display: none;
+  /* Ocultando o player já que os textos não são mais necessários */
+}
+
+.upper-part,
+.song-info,
+.sub-line,
+.title,
+.subtitle,
+.time,
+.progress-bar,
+.progress,
+.info-area {
+  display: none;
+  /* Ocultando os elementos de texto */
+}
+
+/* Media Query para dispositivos menores que 768px */
+@media (max-width: 768px) {
+
+  .section-products3 {
+    overflow-x: hidden;
+  }
+
+  .section-products3 h2 {
+    font-size: 4vh;
+    /* Reduzindo o tamanho da fonte do título */
+  }
+
+  .section-products3 p {
+    font-size: 2vh;
+    /* Reduzindo o tamanho da fonte do parágrafo */
+  }
+
+  .container-products3 {
+    max-width: 90%;
+    /* Ajustando a largura máxima do container */
+    max-height: 70vh;
+    /* Reduzindo a altura máxima do container */
+  }
+
+  .card {
+    width: 90%;
+    /* Reduzindo a largura das cartas */
+  }
+}

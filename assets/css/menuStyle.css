@@ -1,0 +1,151 @@
+nav {
+  width: 100%;
+  height: var(--header-height);
+  background-color:var(--white-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 0;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+nav.visible {
+  opacity: 1;
+}
+
+
+.navbar-logo {
+    max-height: 10vh;
+    width: auto;
+    margin: 0 1vh;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 90vw;
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1vh;
+    margin: 0 auto;
+}
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: var(--gap);
+    flex-grow: 1; /* Permitir que os links cresçam para ocupar o espaço restante */
+    justify-content: center; /* Alinhar os links à direita */
+}
+
+.nav-links li {
+    position: relative;
+}
+  
+  .nav-links li a {
+    font-size: 2.2vh;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+  
+  .nav-links li a:hover {
+    color: var(--secondary-color);
+}
+  
+  .nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: -0.2vh;
+    left: 50%;
+    width: 0;
+    height: 0.2vh;
+    background: var(--secondary-color);
+    transition: all 300ms ease-in-out;
+}
+  
+  .nav-links li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+/* menu responsivel */
+
+.menu-icon {
+    display: none;
+    font-size: 4vh;
+    cursor: pointer;
+    position: absolute;
+    left: 1vh;
+  }
+  
+nav .menu-open .nav-links {
+    display: flex;
+  }
+  
+nav .menu-open .menu-icon {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+
+    nav {
+      background: var(--white-color);
+    }
+  
+    .navbar {
+      display: flex;
+      justify-content: space-between; /* Adiciona espaço entre os elementos */
+      align-items: center;
+      flex-direction: column;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 10vh;
+      right: 0;
+      background: var(--white-color);
+      width: 100%;
+      align-items: center;
+    }
+  
+    .navbar-logo {
+      max-height: 8vh;
+      margin: 0;
+      margin-bottom: 2vh;
+    }
+  
+    .menu-icon {
+      display: block;
+      order: 1; /* Move o ícone do menu para a extremidade direita */ 
+      margin-right: auto; /* Adiciona margem à direita para separar da borda */
+      left: 1vh;
+    }
+    
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .menu-logo {
+      display: flex;
+    }
+  
+    .nav-links li {
+      margin: 0;
+    }
+  
+    .nav-links a {
+      display: block;
+      padding: 2vh 2vw;
+    }
+  }

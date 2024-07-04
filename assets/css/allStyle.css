@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+  --primary-color: #0A1128;
+  --white-color: #FFFFFF;
+  --light-gray-color: #fafafa;
+  --secondary-color: crimson;
+  --gap: 6.5vh;
+  --header-height: 10vh;
+  /* Define a altura do cabeçalho */
+}
+
+
+
+body,
+html {
+  font-family: 'Lora', serif;
+  background-color: #fafafa;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+#produtos,#nossos-valores {
+  padding-top: 8vh; /* Espaçamento superior em relação à altura da viewport */
+  text-align: center; /* Centraliza o conteúdo horizontalmente */
+  min-height: 100vh; /* Garante que a seção tenha pelo menos a altura da viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#qualidade {
+  padding-top: 10vh;
+}
+
+
+
+.btn {
+  display: inline-block;
+  padding: 1vh 2vh;
+  /* Espaçamento interno do botão em vh */
+  margin-top: 5vh;
+  font-size: 2.5vh;
+  /* Tamanho da fonte em vh */
+  text-decoration: none;
+  /* Remover sublinhado padrão de links */
+  color: #fff;
+  /* Cor do texto */
+  background-color: rgb(99, 8, 26);
+  /* Cor de fundo do botão */
+  border: none;
+  /* Remover borda */
+  border-radius: 8px;
+  /* Arredondamento das bordas */
+  cursor: pointer;
+  /* Mudar cursor para indicar que é clicável */
+  transition: background-color 0.3s ease;
+  /* Transição suave na mudança de cor de fundo */
+
+  /* Estilização adicional */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+}
+
+.btn:hover {
+  background-color: rgb(139, 11, 36);
+  /* Cor de fundo ao passar o mouse */
+}

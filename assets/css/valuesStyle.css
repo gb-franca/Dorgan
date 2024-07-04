@@ -1,0 +1,109 @@
+/* Estilos base */
+.values-test {
+    background-image: url("../img/fundo-de-madeira.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Fixa a imagem de fundo */
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    color: var(--white-color);
+    padding: 5vh 2vh; /* Adiciona padding ao redor da seção */
+}
+
+.title-value {
+    font-size: 3.5vh;
+    margin-bottom: 20vh; /* Espaçamento inferior do título */
+}
+
+.values-content {
+    max-width: 80vw;
+    margin: 0 auto; /* Centraliza na horizontal */
+    text-align: center; /* Centraliza o texto dentro das colunas */
+}
+
+.grid-values-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas */
+    gap: 4vh; /* Espaçamento entre as colunas */
+    counter-reset: grid-counter;
+    margin-bottom: 5vh;
+}
+
+.grid-values-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    gap: 4vh; /* Espaçamento entre as colunas */
+}
+
+.grid-values-1 article,
+.grid-values-2 article {
+    text-align: left; /* Alinha o texto à esquerda dentro do artigo */
+    padding: 2vh; /* Espaçamento interno do artigo */
+    background: rgba(255, 255, 255, 0.1); /* Fundo transparente para os artigos */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para os artigos */
+    transition: transform 0.3s; /* Transição suave para hover */
+}
+
+.grid-values-1 article:hover,
+.grid-values-2 article:hover {
+    transform: scale(1.05); /* Aumenta o artigo ao passar o mouse */
+}
+
+.grid-values-1 article::before,
+.grid-values-2 article::before {
+    display: block;
+    font-size: 5vh;
+    font-weight: bold;
+    color: var(--highlight-color); /* Ajuste conforme necessário */
+    margin-bottom: 1vh;
+}
+
+.grid-values-1 h3,
+.grid-values-2 h3 {
+    font-size: 3vh;
+    padding-left: 1vh;
+    padding-bottom: 1vh; /* Espaçamento abaixo do título */
+}
+
+.grid-values-1 p,
+.grid-values-2 p {
+    font-size: 2.5vh;
+    line-height: 1.5; /* Espaçamento entre linhas */
+    color: var(--white-color); /* Ajuste de cor do texto */
+}
+
+/* Media query para telas menores */
+@media (max-width: 1024px) {
+    .title-value {
+        font-size: 3vh; /* Reduz o tamanho do título */
+        margin-bottom: 10vh; /* Reduz o espaço inferior do título */
+    }
+
+    .values-content {
+        max-width: 90vw; /* Ajusta a largura máxima para telas menores */
+    }
+
+    .grid-values-1,
+    .grid-values-2 {
+        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+        gap: 3vh; /* Espaçamento entre os artigos */
+    }
+
+    .grid-values-1 article,
+    .grid-values-2 article {
+        margin-bottom: 3vh; /* Espaçamento inferior entre os artigos */
+        padding: 2vh; /* Ajusta o espaçamento interno do artigo */
+    }
+
+    .grid-values-1 h3,
+    .grid-values-2 h3 {
+        font-size: 2.5vh; /* Reduz o tamanho do título */
+        padding-left: 0.5vh; /* Ajusta o espaçamento à esquerda do título */
+        padding-bottom: 0.5vh; /* Reduz o espaçamento abaixo do título */
+    }
+
+    .grid-values-1 p,
+    .grid-values-2 p {
+        font-size: 2vh; /* Reduz o tamanho do texto */
+    }
+}

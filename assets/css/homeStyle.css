@@ -1,0 +1,71 @@
+/* Estilização da seção home */
+.home-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('../img/img-homepage.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    text-align: center;
+    padding-top: calc(var(--header-height) + 10vh);
+    padding-bottom: 10vh;
+    overflow: hidden; /* Para garantir que o pseudo-elemento não transborde */
+}
+
+/* Adicionar camada escura */
+.home-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); /* Sombreamento com 50% de opacidade */
+    z-index: 1;
+}
+
+/* Estilização do conteúdo da home */
+.home-content {
+    position: relative;
+    z-index: 2; /* Garante que o conteúdo fique acima da camada escura */
+    max-width: 80vh;
+    padding: 0 2vh;
+}
+
+/* Estilização do logotipo da home */
+.home-logo {
+    max-width: 35vh;
+    max-height: 35vh;
+    margin-top: -2vh;
+    margin-bottom: 5vh;
+    position: relative;
+    z-index: 2; /* Garante que o logotipo fique acima da camada escura */
+}
+
+/* Estilização do parágrafo da home */
+.home-content p {
+    font-size: 5vh;
+    line-height: 1.5;
+}
+
+.background-fixed {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+  
+
+
+@media (max-width: 768px) {
+    .home-content {
+        padding: 5vh 2vh;
+      }
+    
+      .home-content p {
+        font-size: 3.5vh;
+      }
+}

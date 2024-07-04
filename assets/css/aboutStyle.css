@@ -1,0 +1,102 @@
+.container {
+    background-image: url('../img/fundo-de-madeira.jpg');
+    display: flex;
+    background-size: cover;
+    justify-content: center; /* Centraliza horizontalmente */
+    background-attachment: fixed;
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da viewport */
+    padding-top: 15vh;
+    position: relative; /* Adiciona posição relativa para posicionamento absoluto da imagem */
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    background: #FFF;
+    padding: 4vh; /* Ajustado para 4% da altura da viewport */
+    border: 1px solid #dadadad3;
+    border-radius: 2vh; /* Borda arredondada em relação à altura da viewport */
+    width: 75vh; /* Largura relativa à altura da viewport */
+    box-sizing: border-box;
+    text-align: center; /* Centraliza texto */
+    position: relative; /* Garante que a posição absoluta da imagem seja em relação a este elemento */
+    z-index: 2; /* Eleva o conteúdo sobre a imagem */
+    margin: 0; /* Remove a margem para centralização */
+    transform: translate(-30%, -25%); /* Ajusta para a centralização completa */ 
+}
+
+.content h2 {
+    font-weight: 500;
+    font-size: 5vh; /* Tamanho de fonte relativo à altura da viewport */
+    letter-spacing: -1px;
+    margin: 0 0 3vh 0; /* Margens relativas à altura da viewport */
+}
+
+.content p {
+    font-weight: 400;
+    font-size: 2.2vh; /* Tamanho de fonte relativo à altura da viewport */
+    letter-spacing: -0.54px;
+    line-height: 113%;
+    margin: 0 0 3vh 0; /* Margens relativas à altura da viewport */
+}
+
+.content .info {
+    display: flex;
+    justify-content: center; /* Centraliza itens horizontalmente */
+    margin-top: 4vh; /* Espaçamento superior relativo à altura da viewport */
+}
+
+.content .info div {
+    margin-right: 4vh; /* Margem direita relativa à altura da viewport */
+    text-align: center;
+}
+
+.content .info div h3 {
+    font-weight: 400;
+    font-size: 4vh; /* Tamanho de fonte relativo à altura da viewport */
+    margin: 0;
+}
+
+.content .info div p {
+    font-weight: 400;
+    font-size: 2.5vh; /* Tamanho de fonte relativo à altura da viewport */
+    margin: 0;
+}
+
+.image {
+    position: absolute; /* Posicionamento absoluto para centralizar */
+    width: 70vh; /* Largura relativa à altura da viewport */
+    height: 65vh; /* Altura relativa à altura da viewport */
+    background: url('../img/img-aboutContent.jpeg') no-repeat center center;
+    background-size: cover;
+    border-radius: 2vh; /* Borda arredondada em relação à altura da viewport */
+    z-index: 1; /* Posiciona a imagem atrás do .content */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-20%, -40%); /* Ajusta para a centralização completa */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.384) ;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Altera a direção do flex para coluna */
+      height: auto; /* Ajusta a altura automaticamente */
+      padding: 4vh; /* Ajusta o padding para telas menores */
+    }
+  
+    .content {
+      width: 90%; /* Ajusta a largura para 100% */
+      transform: translate(0, 0); /* Remove o translate para centralização correta */
+      margin-bottom: 4vh; /* Adiciona margem inferior para espaçamento */    
+    }
+  
+    .image {
+        width: 90%; /* Ajusta a largura para 90% */
+        height: auto; /* Ajusta a altura automaticamente */
+        position: static; /* Remove posicionamento absoluto */
+        transform: none; /* Remove transformação */
+        display: block; /* Garante que a imagem seja exibida */
+        margin-top: 4vh; /* Adiciona margem superior para espaçamento */    }
+  }
