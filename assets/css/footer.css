@@ -46,26 +46,23 @@ footer {
     display: contents;
 }
 
-.footer-center a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 2.5vh;
-}
-
-.contact-info div {
+.footer-center .contact-info div {
     margin-bottom: 1.5vh; /* Diminuído para reduzir o espaço inferior */
 }
 
-.contact-info h3 {
+.footer-center .contact-info h3 {
     margin: 0;
     font-size: 3vh; /* Diminuído para garantir que "Número de Contato" caiba em uma linha */
     white-space: nowrap; /* Garante que o texto não quebre */
 }
 
-.contact-info p {
+.footer-center .contact-info p {
     margin: 0.5vh 0;
     font-size: 2.5vh;
+}
+
+.whatsapp-number {
+    white-space: nowrap; /* Garante que o número de WhatsApp não quebre */
 }
 
 .footer-right {
@@ -87,27 +84,6 @@ footer {
 
 .footer-right p {
     margin-top: 2vh;
-}
-
-.contact-details {
-    display: flex;
-    justify-content: center;
-    margin-top: 2vh;
-}
-
-.contact-details div {
-    text-align: center;
-    margin: 0 2vw;
-}
-
-.contact-details h3 {
-    font-size: 2.5vh;
-    font-weight: 600;
-    margin-bottom: 0.5vh;
-}
-
-.contact-details p {
-    font-size: 2vh;
 }
 
 /* @media query para dispositivos menores */
@@ -132,6 +108,38 @@ footer {
 
     .social-media {
         justify-content: center; /* Centraliza os ícones de redes sociais */
+        margin-top: 3vh;
+    }
+}
+
+/* Media query para tablets e notebooks */
+@media (max-width: 1024px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        width: 100%;
+        text-align: center; /* Centraliza o texto na versão tablet e notebook */
+    }
+
+    .footer-left {
+        margin-bottom: 3vh; /* Espaçamento entre os elementos na versão tablet e notebook */
+    }
+
+    .footer-center {
+        grid-template-columns: repeat(3, 1fr); /* Mantém o estilo de grid horizontal */
+        gap: 2vh;
+        justify-items: center;
+    }
+
+    .footer-center .contact-info div {
+        margin-bottom: 2vh;
+    }
+
+    .social-media {
+        justify-content: center;
         margin-top: 3vh;
     }
 }

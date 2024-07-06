@@ -97,7 +97,6 @@
 }
 
 /* Media query para telas menores */
-
 @media (max-width: 768px) {
     .certificate-container {
         font-size: 1.8vh;
@@ -118,5 +117,29 @@
 
     .certificate-container .certificate-card .certificate-content {
         top: -10vh;
+    }
+}
+
+/* Media query para tablets e notebooks */
+@media (max-width: 1024px) {
+    .certificate-container {
+        font-size: 2vh;
+        width: 100%;
+        padding: 2vh;
+    }
+
+    .certificate-container .certificate-card {
+        max-width: 45vh;
+        margin: 2vh 1vh;
+    }
+
+    .certificate-container .certificate-card .certificate-image {
+        width: 50%;
+        height: auto;
+        margin: auto;
+    }
+
+    .certificate-container .certificate-card .certificate-content {
+        top: -12vh;
     }
 }

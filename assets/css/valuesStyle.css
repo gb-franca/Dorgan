@@ -1,4 +1,3 @@
-/* Estilos base */
 .values-test {
     background-image: url("../img/fundo-de-madeira.jpg");
     background-size: cover;
@@ -7,6 +6,7 @@
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
     color: var(--white-color);
     padding: 5vh 2vh; /* Adiciona padding ao redor da seção */
+    margin-top: -10vh; /* Ajuste este valor conforme necessário */
 }
 
 .title-value {

@@ -6,6 +6,7 @@
     height: 100vh;
     background: url('../img/img-homepage.jpg') no-repeat center center;
     background-size: cover;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
