@@ -143,3 +143,16 @@
         top: -12vh;
     }
 }
+
+/* Ajuste para telas maiores que 1024px */
+@media (min-width: 1025px) {
+    .certificate-container .certificate-card:hover {
+        height: 50vh; /* Aumentando a altura do hover para telas maiores */
+    }
+
+    .certificate-container .certificate-card .certificate-content {
+        top: -12vh; /* Ajuste para o conteúdo não transbordar */
+        padding: 2vh 2vh;
+        font-size: 1.8vh;
+    }
+}
