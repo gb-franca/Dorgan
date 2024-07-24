@@ -33,12 +33,12 @@
     position: relative;
     max-width: 30vh;
     height: 15vh;
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.1);
     margin: 3vh 3vh;
     padding: 2vh 1vh;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.452);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     border-radius: 1.5vh;
 }
@@ -68,7 +68,7 @@
     position: relative;
     top: -14vh;
     padding: 1vh 2vh;
-    color: #111;
+    color: var(--light-gray-color);
     text-align: center;
     visibility: hidden;
     opacity: 0;
@@ -88,7 +88,7 @@
     left: 50%;
     transform: translateX(-50%);
     font-size: 2vh;
-    color: rgba(0, 0, 0, 0.5);
+    color: var(--light-gray-color);
     transition: opacity 0.3s ease-in-out;
 }
 
