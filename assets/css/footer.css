@@ -116,7 +116,7 @@ footer {
 
     .footer-center {
         grid-template-columns: 1fr; /* Uma coluna para os itens no centro */
-        margin-left: 20vh;
+        margin-left: 10vh;
         gap: 3vh;
         justify-items: center; /* Centraliza os itens horizontalmente */
         text-align: center;
