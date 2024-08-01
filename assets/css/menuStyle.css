@@ -149,3 +149,32 @@ nav .menu-open .menu-icon {
       padding: 2vh 2vw;
     }
   }
+  
+  @media (max-width: 375px) {
+    nav {
+        padding: 1vh 0; /* Ajusta o padding para telas menores */
+    }
+
+    .navbar-logo {
+        max-height: 8vh; /* Ajusta o tamanho do logo */
+    }
+
+    .menu-icon {
+        font-size: 3.5vh; /* Ajusta o tamanho do ícone do menu */
+        left: 1.5vh; /* Ajusta a posição do ícone do menu */
+    }
+
+    .navbar {
+        flex-direction: column; /* Coloca a direção dos itens da barra de navegação em coluna */
+    }
+
+    .nav-links {
+        top: 8vh; /* Ajusta a posição do menu dropdown */
+        padding: 2vh 0; /* Ajusta o padding do menu dropdown */
+    }
+
+    .nav-links a {
+        font-size: 2vh; /* Ajusta o tamanho da fonte dos links */
+        padding: 1.5vh 2vw; /* Ajusta o padding dos links */
+    }
+}

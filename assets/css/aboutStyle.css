@@ -106,3 +106,33 @@
         margin-top: 4vh; /* Adiciona margem superior para espaçamento */
     }
 }
+
+@media (max-width: 375px) {
+    .content h2 {
+        font-size: 4vh; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    .content p {
+        font-size: 2vh; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    .content .info {
+        justify-content: space-between; /* Mantém os itens espaçados horizontalmente */
+        margin-top: 3vh; /* Ajusta a margem superior */
+    }
+
+    .content .info div {
+        margin-right: 2vh; /* Ajusta a margem direita */
+        margin-bottom: 2vh; /* Adiciona margem inferior para espaçamento */
+        text-align: center; /* Centraliza o texto */
+        flex: 1; /* Faz com que cada div ocupe espaço igual */
+    }
+
+    .content .info div h3 {
+        font-size: 3vh; /* Ajusta o tamanho da fonte */
+    }
+
+    .content .info div p {
+        font-size: 2vh; /* Ajusta o tamanho da fonte */
+    }
+}

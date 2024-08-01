@@ -1,13 +1,13 @@
 footer {
     background-color: #333;
     color: white;
-    padding: 1.5vh 0; /* Diminuído para reduzir a altura */
+    padding: 1.5vh 0;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Alinhamento vertical centralizado */
+    align-items: center;
     max-width: 100%;
     margin: 0 auto;
     padding: 0 2vh;
@@ -19,8 +19,8 @@ footer {
 }
 
 .footer-left {
-    align-self: flex-start; /* Alinhamento superior */
-    text-align: left; /* Alinha o texto à esquerda */
+    align-self: flex-start;
+    text-align: left;
 }
 
 .footer-logo {
@@ -37,8 +37,8 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5vh;
-    justify-items: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Centraliza os itens verticalmente dentro da área do grid */
+    justify-items: center;
+    align-items: center;
     text-align: center;
 }
 
@@ -47,13 +47,13 @@ footer {
 }
 
 .footer-center .contact-info div {
-    margin-bottom: 1.5vh; /* Diminuído para reduzir o espaço inferior */
+    margin-bottom: 1.5vh;
 }
 
 .footer-center .contact-info h3 {
     margin: 0;
-    font-size: 3vh; /* Diminuído para garantir que "Número de Contato" caiba em uma linha */
-    white-space: nowrap; /* Garante que o texto não quebre */
+    font-size: 3vh;
+    white-space: nowrap;
 }
 
 .footer-center .contact-info p {
@@ -61,13 +61,14 @@ footer {
     font-size: 2.5vh;
 }
 
-.whatsapp-number {
-    white-space: nowrap; /* Garante que o número de WhatsApp não quebre */
+.whatsapp-number, .email-address {
+    white-space: nowrap;
+    word-break: break-all;
 }
 
 .footer-right {
     text-align: right;
-    align-self: flex-end; /* Alinha para o final do footer */
+    align-self: flex-end;
 }
 
 .social-media {
@@ -86,56 +87,52 @@ footer {
     margin-top: 2vh;
 }
 
-/* @media query para dispositivos menores */
 @media screen and (max-width: 768px) {
     footer {
-        padding: 4vh 0; /* Aumentado para 4vh para dispositivos menores */
+        padding: 4vh 0;
         overflow-x: hidden;
     }
 
     .footer-container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         padding: 0 2vh;
     }
 
     .footer-left, .footer-center, .footer-right {
         width: 100%;
-        text-align: left;
+        text-align: center;
         padding: 2vh 0;
     }
 
     .footer-logo {
-        max-width: 15vh; /* Diminuído o tamanho da logo */
-        margin-bottom: 1vh; /* Reduzido o espaço inferior */
+        max-width: 15vh;
+        margin-bottom: 1vh;
     }
 
     .footer-left {
-        margin-bottom: 3vh; /* Espaçamento entre os elementos na versão móvel */
+        margin-bottom: 3vh;
     }
 
     .footer-center {
-        grid-template-columns: 1fr; /* Uma coluna para os itens no centro */
-        margin-left: 10vh;
+        grid-template-columns: 1fr;
         gap: 3vh;
-        justify-items: center; /* Centraliza os itens horizontalmente */
-        text-align: center;
+        justify-items: center;
     }
 
     .footer-center .contact-info {
         display: grid;
-        grid-template-columns: 1fr; /* Transformando em grid vertical */
+        grid-template-columns: 1fr;
         gap: 2vh;
-        justify-items: center; /* Centraliza os itens horizontalmente */
+        justify-items: center;
     }
 
     .social-media {
-        justify-content: center; /* Centraliza os ícones de redes sociais */
+        justify-content: center;
         margin-top: 3vh;
     }
 }
 
-/* Media query para tablets e notebooks */
 @media (max-width: 1024px) {
     .footer-container {
         flex-direction: column;
@@ -144,19 +141,19 @@ footer {
 
     .footer-left, .footer-center, .footer-right {
         width: 100%;
-        text-align: center; /* Centraliza o texto na versão tablet e notebook */
+        text-align: center;
     }
 
     .footer-logo {
-        max-width: 20vh; /* Ajusta o tamanho da logo para tablets e notebooks */
+        max-width: 20vh;
     }
 
     .footer-left {
-        margin-bottom: 3vh; /* Espaçamento entre os elementos na versão tablet e notebook */
+        margin-bottom: 3vh;
     }
 
     .footer-center {
-        grid-template-columns: repeat(3, 1fr); /* Mantém o estilo de grid horizontal */
+        grid-template-columns: 1fr;
         gap: 2vh;
         justify-items: center;
     }
